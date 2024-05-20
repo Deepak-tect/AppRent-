@@ -11,6 +11,7 @@ app.use(
       "Content-Type",
       "Authorization",
       "ngrok-skip-browser-warning",
+      "redirect",
     ],
   })
 );
