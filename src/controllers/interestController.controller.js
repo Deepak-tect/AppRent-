@@ -24,7 +24,7 @@ const expressInterest = asyncHandler(async (req, res) => {
 
     const existingInterest = await Interest.findOne({ propertyId: property._id, buyerId });
     if (existingInterest) {
-        throw new ApiError(400, "Interest already expressed in this property");
+        throw new ApiError(204, "Interest already expressed in this property");
     }
 
     const interest = await Interest.create({ propertyId: property._id, buyerId });
